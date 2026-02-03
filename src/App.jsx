@@ -5,6 +5,7 @@ import './components/style.css'
 import HPSearcher from './components/HPSearcher'
 import callToApi from "./services/api.js";
 import Card from './components/Card.jsx'
+import Preview from './components/Preview.jsx'
 
 
 function App() {
@@ -20,31 +21,21 @@ function App() {
     
     }, []);
 
+    const filteredCharacters = harryPotterdata.filter(character =>
+          character.name.toLowerCase().includes(search.toLowerCase())
+    );
   
 
   return (
     <>
     
       <h1>Juro solemnemente que esto es una travesura...</h1>
-      <HPSearcher ></HPSearcher>
-      
-
-      <ul>
-        {harryPotterdata
-          .filter((character) => character.name.toLowerCase().includes(search.toLowerCase()))
-          .map((character, id) => ( 
-              <li key={id}>
-                <Card 
-                  name={character.name} 
-                  imageUrl={character.image ? character.image : "./public/witch.png"} 
-                  house={character.house ? character.house : "NO KNOWN"}
-                  specie={character.species}
-                  alive={character.alive === true ? "ALIVE" :"DEAD"}>
-
-                </Card>
-              
-              </li>))}
-      </ul> 
+      <HPSearcher onChange={setSearch} ></HPSearcher>
+    
+      <Preview 
+        harryPotterdata={filteredCharacters}
+        
+      ></Preview>
     </>
   )
 }

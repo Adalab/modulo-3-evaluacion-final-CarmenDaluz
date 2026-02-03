@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
 
-const HPSearcher = () => {
+const HPSearcher = ({onChange}) => {
     const noRefresh = (e) => {
         e.preventDefault();
     }
@@ -10,10 +10,6 @@ const HPSearcher = () => {
         
         console.log('Travesura realizada')};
         
-    /*const sendInputValue = (ev) => {
-        props.updateEmail(ev.target.value);
-    };*/
-    
 
     return(
         <>
@@ -24,9 +20,10 @@ const HPSearcher = () => {
                     placeholder="Escribe personaje"
                     required
                     id="fullfillInput"
+                    onChange={(e) => onChange(e.target.value)}
                     
                     /> <br />
-                <button onClick= {filterApi}>Enviar</button>
+                <button >Enviar</button>
             </form>
        
         

@@ -1,10 +1,11 @@
-const Preview = (harryPotterdata) => {
+import Card from './Card.jsx'
+
+const Preview = ({harryPotterdata}) => {
 
     return(
     
         <ul>
             {harryPotterdata
-            .filter((character) => character.name.toLowerCase().includes(search.toLowerCase()))
             .map((character, id) => ( 
                 <li key={id}>
                     <Card 
