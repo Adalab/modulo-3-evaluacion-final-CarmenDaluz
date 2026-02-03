@@ -4,6 +4,7 @@ import './App.css'
 import './components/style.css'
 import HPSearcher from './components/HPSearcher'
 import callToApi from "./services/api.js";
+import Card from './components/Card.jsx'
 
 
 function App() {
@@ -14,25 +15,35 @@ function App() {
     useEffect(() => {
       
       callToApi().then((response) => {
-        console.log(response);
         setHarryPotterData(response);
       });
     
     }, []);
 
+  
+
   return (
     <>
+    
       <h1>Juro solemnemente que esto es una travesura...</h1>
       <HPSearcher ></HPSearcher>
+      
+
       <ul>
         {harryPotterdata
-        .filter((character) => character.name.toLowerCase().includes(search.toLowerCase()))
-        .map((character, id) => ( 
-                <li key={id}>
-                  {`${character.name} ${character.house ? character.house : "NO KNOWN"}  ${character.species}`} 
-                  <img className="imageNoCharacter" src={character.image ? character.image : "./public/witch.png"} alt="foto personaje" /> 
-                  {character.alive === true ? "ALIVE" :"DEAD"}
-                </li>))}
+          .filter((character) => character.name.toLowerCase().includes(search.toLowerCase()))
+          .map((character, id) => ( 
+              <li key={id}>
+                <Card 
+                  name={character.name} 
+                  imageUrl={character.image ? character.image : "./public/witch.png"} 
+                  house={character.house ? character.house : "NO KNOWN"}
+                  specie={character.species}
+                  alive={character.alive === true ? "ALIVE" :"DEAD"}>
+
+                </Card>
+              
+              </li>))}
       </ul> 
     </>
   )

@@ -4,13 +4,17 @@ import { useEffect } from "react";
 const HPSearcher = () => {
     const noRefresh = (e) => {
         e.preventDefault();
-
     }
 
     const filterApi = () => { 
         
         console.log('Travesura realizada')};
+        
+    /*const sendInputValue = (ev) => {
+        props.updateEmail(ev.target.value);
+    };*/
     
+
     return(
         <>
             <h2>¿Qué personaje de Harry Potter buscas?</h2>
@@ -20,7 +24,7 @@ const HPSearcher = () => {
                     placeholder="Escribe personaje"
                     required
                     id="fullfillInput"
-                    onChange={() => setSearch(eval.target.value)}
+                    
                     /> <br />
                 <button onClick= {filterApi}>Enviar</button>
             </form>

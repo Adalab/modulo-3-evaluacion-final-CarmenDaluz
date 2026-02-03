@@ -1,0 +1,14 @@
+.hpCard {
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.cardText {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
