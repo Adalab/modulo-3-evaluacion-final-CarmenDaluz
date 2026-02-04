@@ -1,6 +1,6 @@
 import './Card.css'
 
-const Card = ({id, name, imageUrl, house, specie, alive, className}) => {
+const DetailsCard = ({id, name, imageUrl, house, specie, alive, className}) => {
     return <>
         <div className={`hpCard ${className}`}>
             <h2>{name}</h2>
@@ -14,4 +14,4 @@ const Card = ({id, name, imageUrl, house, specie, alive, className}) => {
     </>
 }
 
-export default Card;
+export default DetailsCard;

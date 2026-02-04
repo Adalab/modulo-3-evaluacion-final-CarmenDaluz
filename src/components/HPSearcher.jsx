@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import './Card.css'
 
 
 const HPSearcher = ({onChange}) => {

@@ -1,14 +1,30 @@
 .hpCard {
-    width: 220px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    background-color: rgb(69, 68, 68);
+    padding: 1rem;
+    width: 250px;
+    height: 300px;
+    color: white;
+    background-image: url("stars.png");
+    background-size: cover;
+    background-position: center;
 }
 
-.cardText {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem;
+
+.cardListGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
 }
+
+img {
+    width: 350px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.gryffindor { border:solid 8px#740001; border-radius: 5%; }
+.slytherin { border:solid 8px #1a472a; border-radius: 5%;}
+.ravenclaw { border:solid 8px #0e1a40; border-radius: 5%;}
+.hufflepuff { border:solid 8px #ecb939; border-radius: 5%;}
+
+
