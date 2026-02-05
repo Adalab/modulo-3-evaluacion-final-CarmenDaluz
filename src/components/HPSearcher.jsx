@@ -2,19 +2,32 @@ import { useEffect } from "react";
 import './Card.css'
 
 
-const HPSearcher = ({onChange}) => {
+const HPSearcher = ({onChange, changeHouse, filteredHouse}) => {
     const noRefresh = (e) => {
         e.preventDefault();
     }
 
-    const filterApi = () => { 
-        
-        console.log('Travesura realizada')};
-        
-
+    
+    
+    const Houses = ['Gryffindor', 'Slytherin', 'Hufflepuff', 'Ravenclaw'];
     return(
         <>
             <h2>¿Qué personaje de Harry Potter buscas?</h2>
+            {Houses.map((house, index) => (
+                <label key={index} >
+                    <input 
+                        type="radio" 
+                        name="house" 
+                        value={house} 
+                        onChange={(e) => changeHouse(e.target.value)}
+                    
+                    />
+                    <span>{house}</span>
+                
+                </label>))} 
+            
+            <button onClick={() => changeHouse("")}>reset</button>    
+            
             <form onSubmit={noRefresh}>
                 <input 
                     type="text" 

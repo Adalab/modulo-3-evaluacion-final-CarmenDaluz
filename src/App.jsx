@@ -16,6 +16,8 @@ function App() {
 
     const [harryPotterdata, setHarryPotterData] = useState([]);
     const [search, setSearch] = useState("")
+    const [filteredHouse, setFilteredHouse] = useState("");
+    
 
     useEffect(() => {
       
@@ -26,8 +28,11 @@ function App() {
     }, []);
 
     const filteredCharacters = harryPotterdata.filter(character =>
-          character.name.toLowerCase().includes(search.toLowerCase())
-    );
+          character.name.toLowerCase().includes(search.toLowerCase()) &&
+          (filteredHouse === "" || character.house=== filteredHouse)
+        );
+
+    
   
 
   return (
@@ -40,7 +45,7 @@ function App() {
             element={
               <>
                 <h1>Juro solemnemente que esto es una travesura...</h1>
-                <HPSearcher onChange={setSearch} />
+                <HPSearcher onChange={setSearch} changeHouse={setFilteredHouse}/>
                 <Preview harryPotterdata={filteredCharacters} />
               </>}
           />
