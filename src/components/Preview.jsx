@@ -1,31 +1,35 @@
 import Card from './Card.jsx'
 import { Link } from "react-router-dom";
 
+import './Preview.css'
 
-const Preview = ({harryPotterdata, filteredCharacters}) => {
+
+const Preview = ({harryPotterdata, search}) => {
     
     return(
     <>
-        <ul className='cardListGrid'>
-            {harryPotterdata
-            .map((character, id) => ( 
-                <li key={id} >
-                    <Link to={`/CardDetail/${character.name}`}>
+        
+            {harryPotterdata.length === 0 
+            ? (<p>No characters match your search.</p>)
+            : ( 
+            <ul className='cardListGrid'>
+                {harryPotterdata.map((character, index) => ( 
+                <li key={index} >
+                    <Link to={`/CardDetail/${character.name.replaceAll(" ", "")}`}>
                         
                         <Card
                         className={character.house.toLowerCase() || 'none'} 
                         name={character.name} 
-                        imageUrl={character.image ? character.image : "./public/witch.png"} 
+                        imageUrl={character.image ? character.image : "./wizard.png"} 
                         house={character.house ? character.house : "NO KNOWN"}
                         specie={character.species}
                         />
-
                     </Link>
-
                 </li>))}
-        </ul> 
+            </ul> )}
         
-    </>);
+    </>
+    );
 }
 
 export default Preview;

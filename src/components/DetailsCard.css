@@ -1,6 +1,40 @@
 
 
 .detailsCard {
-    width: 700px;
+    width: 800px;
+    height: 600px;
+    color: white;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("stars.png");
+    background-size: cover;
+    background-position: center;
 }
+.textNameDetailCard {
+    font-size: 3em;
+}
+.wizardPhoto {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 8px;
+}
+
+.detailscardContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cardDetaiText {
+    margin-left: 2em;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+

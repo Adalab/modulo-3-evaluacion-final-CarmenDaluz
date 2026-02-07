@@ -1,0 +1,79 @@
+
+input[type="radio"], input[type="checkbox"]{
+  accent-color: purple;
+}
+
+.HPSearcher {
+display: flex;
+flex-direction: column;
+gap: 2rem;
+align-items: center;
+
+}
+input {
+  padding: 1rem;
+}
+button {
+  border-radius: 8px;
+  border: 2px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 300;
+  font-family: inherit;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: background-color  0.5s ;
+  align-self: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+button:hover {
+  color: white;
+  background-color: #880909;
+}
+button:focus,
+button:focus {
+  outline: 3px solid #6b2ca1;
+}
+
+.houses {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    
+    
+    
+}
+.ancestry {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+
+} 
+
+.ancestryResetButtton {
+
+  display: flex;
+  flex-direction: row;
+}
+
+.buscador {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+input::placeholder {
+  font-family: "Cinzel", serif;
+}
+input:focus-visible {
+  outline: 3px solid #5c3ca9; /* morado */
+  outline-offset: 2px;
+}
+
+select {
+  font-family: "Cinzel", serif;
+  font-size: 1rem;
+}
+
