@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import './Card.css'
 import './HPSearcher.css'
+import './mediaQueries.css'
 
 
 const HPSearcher = ({onChange, changeHouse, changeAncestry, search, filteredHouse, filteredAncestry, changeAZ, isAZ}) => {
@@ -18,7 +19,7 @@ const HPSearcher = ({onChange, changeHouse, changeAncestry, search, filteredHous
     return(
     <div className="HPSearcher">
     {/* TITULO */}
-        <h2>Which Harry Potter character are you looking for?</h2>
+        <h2 className="mediaQTitle">Which Harry Potter character are you looking for?</h2>
 
     {/* SELECCIÓN CASAS */}
     <div className="houses">

@@ -1,0 +1,40 @@
+@media (max-width: 768px) {
+  .HPSearcher {
+    align-items: center;
+    
+  }
+  .houses {
+    flex-direction: column;
+  }
+
+  .mediaQTitle {
+    display: flex;
+    
+    align-items: center;
+    
+
+  }
+
+  .mediaQcards {
+     grid-template-columns: 1fr ;
+
+  }
+  .detailsCard {
+    width: 90%;
+    max-width: 400px;
+    
+
+  }
+  .detailscardContainer {
+    width: 90%;
+    max-width: 400px;
+    
+  }
+  .cardDetaiText {
+    margin-left: 1.5em;
+  }
+  
+}
+
+
+

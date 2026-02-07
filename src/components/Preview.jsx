@@ -2,6 +2,7 @@ import Card from './Card.jsx'
 import { Link } from "react-router-dom";
 
 import './Preview.css'
+import './mediaQueries.css'
 
 
 const Preview = ({harryPotterdata, search}) => {
@@ -12,7 +13,7 @@ const Preview = ({harryPotterdata, search}) => {
             {harryPotterdata.length === 0 
             ? (<p>No characters match your search.</p>)
             : ( 
-            <ul className='cardListGrid'>
+            <ul className='cardListGrid mediaQcards' >
                 {harryPotterdata.map((character, index) => ( 
                 <li key={index} >
                     <Link to={`/CardDetail/${character.name.replaceAll(" ", "")}`}>

@@ -1,15 +1,15 @@
 import './DetailsCard.css'
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-
+import './mediaQueries.css'
 const DetailsCard = ({harryPotterdata}) => {
     const {name} = useParams();
     
     const character = harryPotterdata.find(c => c.name.replaceAll(" ", "") === name);
     
-if (!character) {return <h2>Tu búsqueda no coincide con ningún personaje</h2>
+if (!character) {return <h2>No characters match your search</h2>
 }
-    return <>
+    return <div className='mediaQdetailsCards'>
         <div className={`detailsCard ${character.house?.toLowerCase() || 'none'}`} >
             <h2 className='textNameDetailCard '>{character.name}</h2>
             <div className='detailscardContainer'>
@@ -33,7 +33,7 @@ if (!character) {return <h2>Tu búsqueda no coincide con ningún personaje</h2>
         <Link to="/">
             <button>Go Back</button>
         </Link>
-    </>
+    </div>
 }
 
 export default DetailsCard;
