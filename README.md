@@ -1,16 +1,61 @@
-# React + Vite
+#  Harry Potter Characters Finder by Carmen Daluz
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web desarrollada con React que muestra un listado de personajes del universo de Harry Potter utilizando una API externa.
 
-Currently, two official plugins are available:
+Permite buscar, filtrar, ordenar y ver el detalle de cada personaje mediante rutas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Proyecto realizado como ejercicio final del Módulo 3 (React) de Carmen Daluz.
 
-## React Compiler
+DEMO
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologías usadas:
+    - React
 
-## Expanding the ESLint configuration
+    - React Router DOM
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+    - JavaScript 
+
+    - HTML semántico
+
+    - CSS + Grid + Responsive
+
+    - Fetch API (API: https://hp-api.onrender.com/)
+
+    - LocalStorage
+
+## Funcionalidades:
+    . Listado de personajes (foto, nombre, casa, especie. Si no hay datos, alternativa).
+    . Buscador por nombre (Filtrado en tiempo real mientras escribes. Si no hay resultado mensaje informativo).
+    . Filtro por casa mediante radios.
+    . Filtro de ascendencia con selector desplegable.
+    . Filtro por orden alfabético, con checkbox.
+    . Botón reset (limpia los filtros volviendo al estado inicial).
+    . Local Storage (los filtros se guardan).
+    . Página de detalle de los personajes (cambio de URL) con imagen, nombre, casa, especie, estado, género y nombres alternativos. Si no hay datos, alternativa.
+    . Botón "Go Back"
+
+
+## Estructura del proyecto:
+    src/
+    ├─ components/
+    │   ├─ HPSearcher.jsx   
+    │   ├─ Preview.jsx      
+    │   ├─ Card.jsx         
+    │   ├─ DetailsCard.jsx  
+    │
+    ├─ services/
+    │   ├─ api.js           
+    │   └─ localStorage.js  
+    │
+    ├─ App.jsx              
+    └─ estilos CSS
+
+## Instalación
+
+    Clonar el repositorio:
+    npm install  
+    npm run dev
+
+##  Autora
+
+Carmen Daluz.
